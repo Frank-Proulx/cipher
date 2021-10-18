@@ -16,13 +16,24 @@ $(document).ready(function() {
     return promptAnswer.charAt(Math.floor(promptAnswer.length / 2)) + caller(promptAnswer);
   }
   const finalAnswer = counter(answer);
+
+  function reverse(lastAnswer) {
+    return lastAnswer.split("").reverse().join("");
+  };
+  const reverseAnswer = reverse(finalAnswer);
   
   $("h1").click(function() {
     alert(answer);
   });
 
-  $("p").click(function() {
+  $("h2").click(function() {
     alert(finalAnswer);
   });
+
+  $("h3").click(function() {
+    alert(reverseAnswer);
+  });
+
+
 
 });
